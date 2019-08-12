@@ -25,10 +25,7 @@
                 android:name=".SelectRamo"
                 android:label="@string/title_ramo">
         </activity>
-        <activity
-                android:name=".gamesScreen"
-                android:label="@string/title_activity_games_screen"
-                android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".gameScreen">
         </activity>
     </application>
 
