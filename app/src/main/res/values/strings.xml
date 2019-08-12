@@ -20,6 +20,7 @@
     <string name="ramo_pioneiro">Pioneiro</string>
     <string name="any_ramo">Qualquer</string>
     <string name="title_ramo">Selecione o ramo desejado</string>
+    <string name="title_activity_games_screen">gamesScreen</string>
 
 
 </resources>
