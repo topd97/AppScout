@@ -30,7 +30,8 @@ class SelectRamo : AppCompatActivity() {
     }
     fun goToGamesPage(ramo:String){
         val intent = Intent(this, gameScreen::class.java)
-        intent.putExtra("Ramo", ramo)
+
+        intent.putExtra(R.string.ramo_selecionado.toString(), ramo)
         startActivity(intent)
     }
 }

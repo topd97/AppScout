@@ -10,6 +10,7 @@ class gameScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game_screen)
 
-        ramoLabel.setText(intent.getStringExtra("ramo"))
+        val ramo = intent.getStringExtra(R.string.ramo_selecionado.toString())
+        ramoLabel.setText(ramo)
     }
 }

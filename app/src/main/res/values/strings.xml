@@ -21,6 +21,7 @@
     <string name="any_ramo">Qualquer</string>
     <string name="title_ramo">Selecione o ramo desejado</string>
     <string name="title_activity_games_screen">gamesScreen</string>
+    <string name="ramo_selecionado">ramo</string>
 
 
 </resources>
