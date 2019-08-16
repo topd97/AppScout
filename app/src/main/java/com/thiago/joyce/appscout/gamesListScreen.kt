@@ -2,12 +2,10 @@ package com.thiago.joyce.appscout
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.view.ViewGroup
-import android.widget.ArrayAdapter
 import android.widget.ListView
-import kotlinx.android.synthetic.main.activity_game_screen.*
+import kotlinx.android.synthetic.main.activity_games_list_screen.*
 
-class gameScreen : AppCompatActivity() {
+class gamesListScreen : AppCompatActivity() {
 
     //isso ta pessimo, descobrir como usar lazy!!!
 //    var listView: ListView
@@ -15,7 +13,7 @@ class gameScreen : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_game_screen)
+        setContentView(R.layout.activity_games_list_screen)
 
         var ramo_selecionado = intent.getStringExtra(R.string.ramo_selecionado.toString())
         ramoLabel.setText(ramo_selecionado)
@@ -37,6 +35,10 @@ class gameScreen : AppCompatActivity() {
 
         var arrayAdapter = GameAdapter(this, gamesArray)
         listView.adapter = arrayAdapter
+
+        listView.setOnClickListener{
+
+        }
 
     }
 

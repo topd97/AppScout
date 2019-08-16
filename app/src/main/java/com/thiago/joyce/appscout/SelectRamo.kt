@@ -3,7 +3,6 @@ package com.thiago.joyce.appscout
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_login_screen.*
 import kotlinx.android.synthetic.main.activity_select_ramo.*
 
 class SelectRamo : AppCompatActivity() {
@@ -29,7 +28,7 @@ class SelectRamo : AppCompatActivity() {
         }
     }
     fun goToGamesPage(ramo:String){
-        val intent = Intent(this, gameScreen::class.java)
+        val intent = Intent(this, gamesListScreen::class.java)
 
         intent.putExtra(R.string.ramo_selecionado.toString(), ramo)
         startActivity(intent)
