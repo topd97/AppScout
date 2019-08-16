@@ -25,7 +25,9 @@
                 android:name=".SelectRamo"
                 android:label="@string/title_ramo">
         </activity>
-        <activity android:name=".gamesListScreen">
+        <activity android:name=".GamesListScreen">
+        </activity>
+        <activity android:name=".GameScreen">
         </activity>
     </application>
 

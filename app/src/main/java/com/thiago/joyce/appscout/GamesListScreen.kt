@@ -1,11 +1,12 @@
 package com.thiago.joyce.appscout
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ListView
 import kotlinx.android.synthetic.main.activity_games_list_screen.*
 
-class gamesListScreen : AppCompatActivity() {
+class GamesListScreen : AppCompatActivity() {
 
     //isso ta pessimo, descobrir como usar lazy!!!
 //    var listView: ListView
@@ -36,10 +37,14 @@ class gamesListScreen : AppCompatActivity() {
         var arrayAdapter = GameAdapter(this, gamesArray)
         listView.adapter = arrayAdapter
 
-        listView.setOnClickListener{
-
+        listView.setOnItemClickListener { parent, view, position, id ->
+            goToGamesPage()
         }
+    }
 
+    fun goToGamesPage(){
+        val intent = Intent(this, GameScreen::class.java)
+        startActivity(intent)
     }
 
 
