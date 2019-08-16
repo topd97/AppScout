@@ -19,7 +19,9 @@ class GamesListScreen : AppCompatActivity() {
         var ramo_selecionado = intent.getStringExtra(R.string.ramo_selecionado.toString())
         ramoLabel.setText(ramo_selecionado)
 
+        //Configurações
         configureList()
+        filterButton.setOnClickListener { changePage(FilterScreen::class.java) }
     }
 
     fun configureList(){
@@ -38,12 +40,12 @@ class GamesListScreen : AppCompatActivity() {
         listView.adapter = arrayAdapter
 
         listView.setOnItemClickListener { parent, view, position, id ->
-            goToGamesPage()
+            changePage(GameScreen::class.java)
         }
     }
 
-    fun goToGamesPage(){
-        val intent = Intent(this, GameScreen::class.java)
+    fun changePage(classe: Class<*>){
+        val intent = Intent(this, classe)
         startActivity(intent)
     }
 
