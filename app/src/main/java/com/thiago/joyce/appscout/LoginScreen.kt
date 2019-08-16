@@ -24,11 +24,12 @@ class LoginScreen : AppCompatActivity() {
     }
 
     fun isValidLogin(): Boolean {
-        if(username_input.text.toString() == "admin" && senha_input.text.toString() == "admin")
-        {
-            return true
-        }
-        return false
+//        if(username_input.text.toString() == "admin" && senha_input.text.toString() == "admin")
+//        {
+//            return true
+//        }
+//        return false
+        return true
     }
 
 
