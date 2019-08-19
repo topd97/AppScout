@@ -8,15 +8,14 @@ import kotlinx.android.synthetic.main.activity_games_list_screen.*
 
 class GamesListScreen : AppCompatActivity() {
 
-    //isso ta pessimo, descobrir como usar lazy!!!
-//    var listView: ListView
     var gamesArray: Array<String> = emptyArray()
+    var ramo_selecionado: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_games_list_screen)
 
-        var ramo_selecionado = intent.getStringExtra(R.string.ramo_selecionado.toString())
+        ramo_selecionado = intent.getStringExtra(R.string.ramo_selecionado.toString())
         ramoLabel.setText(ramo_selecionado)
 
         //Configurações
