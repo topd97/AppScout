@@ -34,3 +34,12 @@ ALTER TABLE `game`
 ADD CONSTRAINT fk_user_registration_number 
 	FOREIGN KEY (user_registration_number)
     REFERENCES user(registration_number);
+    
+CREATE TABLE `place` (
+  `id` INT NOT NULL,
+  `name` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE,
+  UNIQUE INDEX `name_UNIQUE` (`name` ASC) VISIBLE)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
