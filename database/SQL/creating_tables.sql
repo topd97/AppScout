@@ -17,7 +17,7 @@ DEFAULT CHARACTER SET = utf8;
 
 CREATE TABLE `game` (
   `name` VARCHAR(64) NOT NULL,
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `description` VARCHAR(512) NOT NULL,
   `duration_max` INT NULL,
   `duration_min` INT NULL,
@@ -36,10 +36,17 @@ ADD CONSTRAINT fk_user_registration_number
     REFERENCES user(registration_number);
     
 CREATE TABLE `place` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE,
   UNIQUE INDEX `name_UNIQUE` (`name` ASC) VISIBLE)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+	       
+CREATE TABGLE `done_in` (
+  fk_place_id INT NOT NULL,
+  fk_game_id INT NOT NULL,
+  PRIMARY KEY(`fk_place_id`, `fk_game_id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
