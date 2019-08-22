@@ -31,5 +31,25 @@
                 android:name="selectedRamo"
                 app:argType="string"
                 android:defaultValue="Any" />
+        <action
+                android:id="@+id/gameSlectedGoToGameScreen"
+                app:destination="@id/gameFragment" />
+        <action
+                android:id="@+id/goToFilterScreen"
+                app:destination="@id/filterFragment" />
     </fragment>
+    <fragment
+            android:id="@+id/filterFragment"
+            android:name="com.thiago.joyce.appscout.FilterFragment"
+            android:label="fragment_filter"
+            tools:layout="@layout/fragment_filter" >
+        <action
+                android:id="@+id/returnOfFIlterScreen"
+                app:destination="@id/gamesListFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/gameFragment"
+            android:name="com.thiago.joyce.appscout.GameFragment"
+            android:label="fragment_game"
+            tools:layout="@layout/fragment_game" />
 </navigation>
