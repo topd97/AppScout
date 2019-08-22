@@ -20,7 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginScreen">
+        <!--activity android:name=".LoginScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,7 +32,7 @@
                 android:label="@string/title_ramo"></activity>
         <activity android:name=".GamesListScreen"></activity>
         <activity android:name=".GameScreen"></activity>
-        <activity android:name=".FilterScreen"></activity>
+        <activity android:name=".FilterScreen"></activity-->
     </application>
 
 </manifest>
