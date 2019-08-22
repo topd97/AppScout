@@ -1,6 +1,6 @@
 package com.thiago.joyce.appscout
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.R.array
 import android.widget.ArrayAdapter
