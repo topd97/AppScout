@@ -8,5 +8,23 @@
             android:id="@+id/loginFragment3"
             android:name="com.thiago.joyce.appscout.LoginFragment"
             android:label="fragment_login"
-            tools:layout="@layout/fragment_login" />
+            tools:layout="@layout/fragment_login" >
+        <action
+                android:id="@+id/logedAndGoToRamosScreen"
+                app:destination="@id/ramosFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/ramosFragment"
+            android:name="com.thiago.joyce.appscout.RamosFragment"
+            android:label="fragment_ramos"
+            tools:layout="@layout/fragment_ramos" >
+        <action
+                android:id="@+id/action_ramosFragment_to_gamesListFragment"
+                app:destination="@id/gamesListFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/gamesListFragment"
+            android:name="com.thiago.joyce.appscout.GamesListFragment"
+            android:label="fragment_games_list"
+            tools:layout="@layout/fragment_games_list" />
 </navigation>
