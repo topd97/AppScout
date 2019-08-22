@@ -19,12 +19,17 @@
             android:label="fragment_ramos"
             tools:layout="@layout/fragment_ramos" >
         <action
-                android:id="@+id/action_ramosFragment_to_gamesListFragment"
+                android:id="@+id/ramoChoosedGoToGamesList"
                 app:destination="@id/gamesListFragment" />
     </fragment>
     <fragment
             android:id="@+id/gamesListFragment"
             android:name="com.thiago.joyce.appscout.GamesListFragment"
             android:label="fragment_games_list"
-            tools:layout="@layout/fragment_games_list" />
+            tools:layout="@layout/fragment_games_list" >
+        <argument
+                android:name="selectedRamo"
+                app:argType="string"
+                android:defaultValue="Any" />
+    </fragment>
 </navigation>

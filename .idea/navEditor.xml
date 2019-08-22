@@ -29,6 +29,15 @@
                             <option name="y" value="199" />
                           </Point>
                         </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="logedAndGoToRamosScreen">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
                       </LayoutPositions>
                     </value>
                   </entry>
@@ -40,6 +49,15 @@
                             <option name="x" value="558" />
                             <option name="y" value="199" />
                           </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="ramoChoosedGoToGamesList">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
                         </option>
                       </LayoutPositions>
                     </value>
