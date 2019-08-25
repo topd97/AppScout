@@ -3,10 +3,10 @@ package com.thiago.joyce.appscout
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class GameScreen : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_game_screen)
+        setContentView(R.layout.activity_main)
     }
 }

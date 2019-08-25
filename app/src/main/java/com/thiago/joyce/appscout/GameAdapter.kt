@@ -19,9 +19,6 @@ class GameAdapter(context: Context, itensList: Array<String>): BaseAdapter() {
     }
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-//        val textView = TextView(parentContext)
-//        textView.text = itensInListView[position]
-//        return text
         val layoutInflater = LayoutInflater.from(parentContext)
         val rowGame = layoutInflater.inflate(R.layout.row_game, parent, false)
         rowGame.titulo.setText("Titulo: " + itensInListView[position])
