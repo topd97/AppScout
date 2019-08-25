@@ -1,25 +1,26 @@
 package com.thiago.joyce.appscout
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ListView
 import kotlinx.android.synthetic.main.activity_games_list_screen.*
 
 class GamesListScreen : AppCompatActivity() {
 
-    //isso ta pessimo, descobrir como usar lazy!!!
-//    var listView: ListView
     var gamesArray: Array<String> = emptyArray()
+    var ramo_selecionado: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_games_list_screen)
 
-        var ramo_selecionado = intent.getStringExtra(R.string.ramo_selecionado.toString())
+        ramo_selecionado = intent.getStringExtra(R.string.ramo_selecionado.toString())
         ramoLabel.setText(ramo_selecionado)
 
+        //Configurações
         configureList()
+        filterButton.setOnClickListener { changePage(FilterScreen::class.java) }
     }
 
     fun configureList(){
@@ -38,12 +39,12 @@ class GamesListScreen : AppCompatActivity() {
         listView.adapter = arrayAdapter
 
         listView.setOnItemClickListener { parent, view, position, id ->
-            goToGamesPage()
+            changePage(GameScreen::class.java)
         }
     }
 
-    fun goToGamesPage(){
-        val intent = Intent(this, GameScreen::class.java)
+    fun changePage(classe: Class<*>){
+        val intent = Intent(this, classe)
         startActivity(intent)
     }
 

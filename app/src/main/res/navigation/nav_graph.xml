@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/nav_graph"
+        app:startDestination="@id/loginFragment3">
+    <fragment
+            android:id="@+id/loginFragment3"
+            android:name="com.thiago.joyce.appscout.LoginFragment"
+            android:label="fragment_login"
+            tools:layout="@layout/fragment_login" >
+        <action
+                android:id="@+id/logedAndGoToRamosScreen"
+                app:destination="@id/ramosFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/ramosFragment"
+            android:name="com.thiago.joyce.appscout.RamosFragment"
+            android:label="fragment_ramos"
+            tools:layout="@layout/fragment_ramos" >
+        <action
+                android:id="@+id/ramoChoosedGoToGamesList"
+                app:destination="@id/gamesListFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/gamesListFragment"
+            android:name="com.thiago.joyce.appscout.GamesListFragment"
+            android:label="fragment_games_list"
+            tools:layout="@layout/fragment_games_list" >
+        <argument
+                android:name="selectedRamo"
+                app:argType="string"
+                android:defaultValue="Any" />
+        <action
+                android:id="@+id/gameSlectedGoToGameScreen"
+                app:destination="@id/gameFragment" />
+        <action
+                android:id="@+id/goToFilterScreen"
+                app:destination="@id/filterFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/filterFragment"
+            android:name="com.thiago.joyce.appscout.FilterFragment"
+            android:label="fragment_filter"
+            tools:layout="@layout/fragment_filter" >
+        <action
+                android:id="@+id/returnOfFIlterScreen"
+                app:destination="@id/gamesListFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/gameFragment"
+            android:name="com.thiago.joyce.appscout.GameFragment"
+            android:label="fragment_game"
+            tools:layout="@layout/fragment_game" />
+</navigation>
