@@ -12,7 +12,7 @@ import android.widget.ListView
 import androidx.navigation.NavDirections
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
-import kotlinx.android.synthetic.main.activity_games_list_screen.*
+import kotlinx.android.synthetic.main.fragment_games_list.*
 
 /**
  * A simple [Fragment] subclass.
