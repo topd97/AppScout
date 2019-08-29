@@ -29,8 +29,7 @@
             tools:layout="@layout/fragment_games_list" >
         <argument
                 android:name="selectedRamo"
-                app:argType="string"
-                android:defaultValue="Any" />
+                app:argType="string" />
         <action
                 android:id="@+id/gameSlectedGoToGameScreen"
                 app:destination="@id/gameFragment" />
@@ -45,7 +44,13 @@
             tools:layout="@layout/fragment_filter" >
         <action
                 android:id="@+id/returnOfFIlterScreen"
-                app:destination="@id/gamesListFragment" />
+                app:destination="@id/gamesListFragment"
+                app:launchSingleTop="false"
+                app:popUpTo="@+id/gamesListFragment"
+                app:popUpToInclusive="true" />
+        <argument
+                android:name="selectedRamo"
+                app:argType="string" />
     </fragment>
     <fragment
             android:id="@+id/gameFragment"

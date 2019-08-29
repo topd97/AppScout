@@ -43,7 +43,10 @@ class GamesListFragment : androidx.fragment.app.Fragment() {
 
         //Configurações
         configureList()
-        filterButton.setOnClickListener{changePage(GamesListFragmentDirections.goToFilterScreen())}
+        filterButton.setOnClickListener{
+            val action: GamesListFragmentDirections.GoToFilterScreen = GamesListFragmentDirections.goToFilterScreen(ramo_selecionado)
+            changePage(action)
+        }
     }
 
     fun configureList(){

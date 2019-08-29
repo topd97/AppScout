@@ -38,8 +38,7 @@ class RamosFragment : androidx.fragment.app.Fragment() {
     }
 
     fun goToGamesList(ramo: String){
-        val action: RamosFragmentDirections.RamoChoosedGoToGamesList = RamosFragmentDirections.ramoChoosedGoToGamesList()
-        action.setSelectedRamo(ramo)
+        val action: RamosFragmentDirections.RamoChoosedGoToGamesList = RamosFragmentDirections.ramoChoosedGoToGamesList(ramo)
         findNavController().navigate(action)
     }
 

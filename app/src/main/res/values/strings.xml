@@ -25,7 +25,7 @@
 
     <!-- Strings related to Filter -->
     <string name="duracaoLabel">Duração (minutos):</string>
-    <string name="filterTitle">Seleciones os filtros desejados:</string>
+    <string name="filterTitle">Seleciones os filtros desejados para o ramo</string>
     <string name="quantLabel">Quantidade de participantes:</string>
     <string name="compLabel">Competencia:</string>
     <string name="locationLabel">Local:</string>

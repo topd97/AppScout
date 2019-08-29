@@ -8,11 +8,16 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Spinner
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
+import kotlinx.android.synthetic.main.fragment_filter.*
 
 /**
  * A simple [Fragment] subclass.
  */
 class FilterFragment : Fragment() {
+
+    var ramoSelecionado = ""
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,10 +28,23 @@ class FilterFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        if(arguments !=null){
+            val argumentsBundle = arguments as Bundle
+            val args: GamesListFragmentArgs = GamesListFragmentArgs.fromBundle(argumentsBundle)
+            ramoSelecionado = args.selectedRamo
+        }
+
         super.onViewCreated(view, savedInstanceState)
         configureDropDown(R.id.AreaDrop, R.array.FisecaArray)
         configureDropDown(R.id.compDrop, R.array.CompArray)
         configureDropDown(R.id.locationDrop, R.array.LocationArray)
+        filterTitle.setText("${filterTitle.text} $ramoSelecionado :")
+
+        filterButton.setOnClickListener{
+            val action: FilterFragmentDirections.ReturnOfFIlterScreen = FilterFragmentDirections.returnOfFIlterScreen("abc")
+            findNavController().navigate(action)
+        }
     }
 
     fun configureDropDown(idSpinner: Int, arrayStrings: Int){
