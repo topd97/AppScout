@@ -9,6 +9,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ListView
+import androidx.navigation.NavDirections
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import kotlinx.android.synthetic.main.activity_games_list_screen.*
 
 /**
@@ -40,7 +43,7 @@ class GamesListFragment : androidx.fragment.app.Fragment() {
 
         //Configurações
         configureList()
-//        filterButton.setOnClickListener { changePage(FilterScreen::class.java) }
+        filterButton.setOnClickListener{changePage(GamesListFragmentDirections.goToFilterScreen())}
     }
 
     fun configureList(){
@@ -61,15 +64,14 @@ class GamesListFragment : androidx.fragment.app.Fragment() {
             listView.adapter = arrayAdapter
         }
 
-//        listView.setOnItemClickListener { parent, view, position, id ->
-//            changePage(GameScreen::class.java)
-//        }
+        listView.setOnItemClickListener { parent, view, position, id ->
+            changePage(GamesListFragmentDirections.gameSlectedGoToGameScreen())
+        }
     }
 
-//    fun changePage(classe: Class<*>){
-//        val intent = Intent(this, classe)
-//        startActivity(intent)
-//    }
+    fun changePage(action: NavDirections){
+        findNavController().navigate(action)
+    }
 
 
 
