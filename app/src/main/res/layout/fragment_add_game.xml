@@ -1,15 +1,171 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".addGameFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="ADD a game"
-            android:textSize="72sp" />
+            android:id="@+id/nameLabel"
+            android:layout_width="94dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="Nome do jogo:"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <EditText
+            android:id="@+id/nameField"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:gravity="bottom"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:textAlignment="textStart"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/nameLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/nameLabel"
+            app:layout_constraintTop_toTopOf="@+id/nameLabel" />
+
+    <EditText
+            android:id="@+id/editText3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView4"
+            app:layout_constraintEnd_toEndOf="@+id/nameField"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView4"
+            app:layout_constraintTop_toTopOf="@+id/textView4"
+            app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="a"
+            app:layout_constraintBottom_toBottomOf="@+id/editText2"
+            app:layout_constraintEnd_toStartOf="@+id/editText3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/editText2"
+            app:layout_constraintTop_toTopOf="@+id/editText2"
+            app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+            android:id="@+id/editText2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/durationLabel"
+            app:layout_constraintEnd_toStartOf="@+id/textView4"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/durationLabel"
+            app:layout_constraintTop_toTopOf="@+id/durationLabel"
+            app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+            android:id="@+id/durationLabel"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="Duração:"
+            app:layout_constraintEnd_toStartOf="@+id/nameField"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/nameLabel"
+            app:layout_constraintTop_toBottomOf="@+id/nameLabel" />
+
+    <TextView
+            android:id="@+id/textView5"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="16dp"
+            android:text="Quantidade de participantes:"
+            app:layout_constraintEnd_toEndOf="@+id/durationLabel"
+            app:layout_constraintStart_toStartOf="@+id/durationLabel"
+            app:layout_constraintTop_toBottomOf="@+id/durationLabel" />
+
+    <EditText
+            android:id="@+id/editText7"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView5"
+            app:layout_constraintEnd_toStartOf="@+id/textView8"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView5"
+            app:layout_constraintTop_toTopOf="@+id/textView5" />
+
+    <TextView
+            android:id="@+id/textView8"
+            android:layout_width="8dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="a"
+            app:layout_constraintBottom_toBottomOf="@+id/editText7"
+            app:layout_constraintEnd_toStartOf="@+id/editText8"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/editText7"
+            app:layout_constraintTop_toTopOf="@+id/editText7" />
+
+    <EditText
+            android:id="@+id/editText8"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView8"
+            app:layout_constraintEnd_toEndOf="@+id/editText3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView8"
+            app:layout_constraintTop_toTopOf="@+id/textView8" />
+
+    <TextView
+            android:id="@+id/textView9"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="Material:"
+            app:layout_constraintEnd_toStartOf="@+id/editText7"
+            app:layout_constraintStart_toStartOf="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <EditText
+            android:id="@+id/editText9"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView9"
+            app:layout_constraintEnd_toEndOf="@+id/editText8"
+            app:layout_constraintStart_toEndOf="@+id/textView9"
+            app:layout_constraintTop_toTopOf="@+id/textView9" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
