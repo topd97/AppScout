@@ -43,10 +43,17 @@ class GamesListFragment : androidx.fragment.app.Fragment() {
 
         //Configurações
         configureList()
+
+        //Listeners
         filterButton.setOnClickListener{
             val action: GamesListFragmentDirections.GoToFilterScreen = GamesListFragmentDirections.goToFilterScreen(ramo_selecionado)
             changePage(action)
         }
+        addButton.setOnClickListener{
+            val action: GamesListFragmentDirections.AddGameButtonClicked = GamesListFragmentDirections.addGameButtonClicked(ramo_selecionado)
+            changePage(action)
+        }
+
     }
 
     fun configureList(){
@@ -54,6 +61,18 @@ class GamesListFragment : androidx.fragment.app.Fragment() {
         var listView = lista_jogos
 
         //Aqui vamos pegar os dados do banco
+        gamesArray+= "test1"
+        gamesArray+= "test2"
+        gamesArray+= "test3"
+        gamesArray+= "test4"
+        gamesArray+= "test5"
+        gamesArray+= "test6"
+        gamesArray+= "test1"
+        gamesArray+= "test2"
+        gamesArray+= "test3"
+        gamesArray+= "test4"
+        gamesArray+= "test5"
+        gamesArray+= "test6"
         gamesArray+= "test1"
         gamesArray+= "test2"
         gamesArray+= "test3"

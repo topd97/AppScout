@@ -8,6 +8,18 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
+                  <entry key="addGameFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="1102" />
+                            <option name="y" value="502" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="filterFragment">
                     <value>
                       <LayoutPositions>
@@ -19,7 +31,7 @@
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_filterFragment_to_gamesListFragment">
+                            <entry key="returnOfFIlterScreen">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -52,12 +64,12 @@
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_gamesListFragment_to_filterFragment">
+                            <entry key="gameSlectedGoToGameScreen">
                               <value>
                                 <LayoutPositions />
                               </value>
                             </entry>
-                            <entry key="action_gamesListFragment_to_gameFragment">
+                            <entry key="goToFilterScreen">
                               <value>
                                 <LayoutPositions />
                               </value>

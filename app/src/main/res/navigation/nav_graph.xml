@@ -36,6 +36,9 @@
         <action
                 android:id="@+id/goToFilterScreen"
                 app:destination="@id/filterFragment" />
+        <action
+                android:id="@+id/addGameButtonClicked"
+                app:destination="@id/addGameFragment" />
     </fragment>
     <fragment
             android:id="@+id/filterFragment"
@@ -57,4 +60,13 @@
             android:name="com.thiago.joyce.appscout.GameFragment"
             android:label="fragment_game"
             tools:layout="@layout/fragment_game" />
+    <fragment
+            android:id="@+id/addGameFragment"
+            android:name="com.thiago.joyce.appscout.addGameFragment"
+            android:label="fragment_add_game"
+            tools:layout="@layout/fragment_add_game" >
+        <argument
+                android:name="selectedRamo"
+                app:argType="string" />
+    </fragment>
 </navigation>
