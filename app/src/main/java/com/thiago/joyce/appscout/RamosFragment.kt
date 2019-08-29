@@ -27,6 +27,13 @@ class RamosFragment : androidx.fragment.app.Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val totalHeight = view.height
+        lobinhoButton.height = totalHeight / 5
+        escoteiroButton.height = totalHeight / 5
+        seniorButton.height = totalHeight / 5
+        pioneiroButton.height = totalHeight / 5
+        anyButton.height = totalHeight / 5
+
         lobinhoButton.setOnClickListener{goToGamesList("Lobinho")};
         escoteiroButton.setOnClickListener{goToGamesList("Escoteiro")};
         seniorButton.setOnClickListener{goToGamesList("Senior")};
